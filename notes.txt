@@ -1,0 +1,56 @@
+01)
+change in package json file
+ "bin": {
+    "note" : "./index.js"
+  },
+
+02)
+"which node" : tells you which node you are using
+"sudo npm link --force"
+
+03)
+#!/usr/bin/env node
+important shebang line
+
+https://youtu.be/y-zS9XV_kRM?si=dbEQlV_a1rkXlA9C
+
+use this link for basics of CLI
+
+04)
+
+go to "yargs npm"
+
+run command in vscode -> "npm i yargs"
+
+now below content and paste it in command file
+----
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+
+yargs(hideBin(process.argv))
+  .command(
+    "curl <url>",
+    "fetch the contents of the URL",
+    () => {},
+    (argv) => {
+      console.info(argv);
+    }
+  )
+  .demandCommand(1)
+  .parse();
+----
+
+05)
+note curl "google.com"
+run in terminal and observe output
+
+06)
+note new "learn new js" --tags "js, for life"
+
+07)
+everything is stored in argv object
+
+08)
+type "note --help" to get lisr of all of your commands
+
+
